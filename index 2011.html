@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<!-- Start of StatCounter Code -->
+<script type="text/javascript">
+var sc_project=3400463; 
+var sc_invisible=1; 
+var sc_partition=37; 
+var sc_security="49916635"; 
+</script>
+
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script><noscript>
+<div class="statcounter"><a class="statcounter" href="http://www.statcounter.com/"><img class="statcounter" src="http://c38.statcounter.com/3400463/0/49916635/1/" alt="website statistics" /></a></div></noscript>
+<!-- End of StatCounter Code -->
+<center>
+<h1> <b><font color="#000066">Reversible Logic Synthesis Benchmarks
+Page</font></b></h1>
+</center>
+<hr width="100%">
+<div style="text-align: center;"><font size="+1"
+ style="color: rgb(204, 0, 0);"><span style="font-weight: bold;">Latest
+news/updates:<br>
+</span></font>September 2, 2011: <a href="news.html">two new circuits added.</a></div>
+<div style="text-align: center;">January 28, February 8, and February 16, 2011: <a href="news.html">
+  fourteen new circuits added.</a></div>
+<div style="text-align: center;">January 11, 2011: <a href="news.html">maximal size optimal 4-bit 
+  circuits added.</a> </div>
+<hr width="100%">
+<p>This project is considered as a complementary tool for publishing
+the results of reversible logic (<a href="definitions.html">definitions</a>)
+synthesis. In the very limited space of any standard publication,
+only the cost calculation is usually shown, whereas the actual designs
+would be of more interest. Some authors use non-standard gates, others
+use their own metric for the calculation of the circuit cost, which further 
+complicates comparison of the circuit designs. Here, an approach for a unified comparison of the
+results is suggested, where any author <a href="submit.html"> can
+publish</a> their design and/or compare it with already posted ones.
+In order to unify the different gate libraries and cost metrics the following
+restrictions apply. First, the synthesis is done with common (in this
+area) restrictions: no
+fan-outs and no feedbacks. Second, the synthesis is preferred to be
+done
+in one of the following libraries: </p>
+<ul>
+  <li> <b><font size="+1" color="#003300">NCT:</font>
+NOT, CNOT, Toffoli. </b>This gate library was introduced by Toffoli in
+his 1980 paper. This library is the smallest complete set of gates.
+However,
+an additional garbage bit (not every reversible specification can be
+realized
+with zero garbage) may be required by this model.</li>
+  <li> <b><font size="+1" color="#003300">NCTSF:</font>
+NOT, CNOT, Toffoli, SWAP, Fredkin. </b>This library adds SWAP and
+original Fredkin gate to the previous library. Fredkin gates are of
+interest as in some technologies they have a small cost. Inclusions:
+NCTSF&gt;NCT.</li>
+  <li> <b><font size="+1" color="#003300">GT:</font>
+generalized (<i>n</i>-bit) Toffoli. </b>This gate library is complete
+and does not require additional garbage for any reversible
+specification.
+However, some of the gates in this library are expected to have a high
+technological cost. Inclusions: GT&gt;NCT.</li>
+  <li> <b><font size="+1" color="#003300">GT&amp;GF:</font>
+generalized Toffoli and generalized (<i>n</i>-bit) Fredkin. </b>The
+largest gate library. Inclusions: GT&amp;GF&gt;GT, GT&amp;GF&gt;NCTSF,
+GT&amp;GF&gt;NCT.</li>
+</ul>
+Input constants are preset to either 0 or 1 by the designer. Finally,
+the resulting cost is measured with three numbers: garbage, number of
+gates and <a href="definitions.html">quantum cost</a> . All results
+are published in two formats: <a href="mach-read.html">machine-readable
+format</a> and a picture with optional author comments. Everyone is
+welcome to <a href="submit.html"> submit</a> their results in the
+machine-readable format for the immediate publication on this website
+as long as no better design is already published.
+<p>Circuits for the following benchmark
+functions are currently available: </p>
+<table border="1" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber1">
+  <tr>
+    <td width="18%"><b>Family/type</b></td>
+    <td width="82%"><b>Individual functions and circuits</b></td>
+  </tr>
+  <tr>
+    <td width="18%"> <b><a href="4bmgc.html">4-bit with maximal gate count:</a></b></td>
+    <td width="82%"> <b><a href="4b15g_1.html">4b15g_1</a> ,
+    <a href="4b15g_2.html">4b15g_2</a> , <a href="4b15g_3.html">4b15g_3</a> ,
+    <a href="4b15g_4.html">4b15g_4</a> , <a href="4b15g_5.html">4b15g_5</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"> <b><a href="adders.html">Adders:</a></b></td>
+    <td width="82%"> <b> <a href="rd32.html">1bitadder (rd32)</a> 
+  , <a href="5bitadder.html">5bitadder</a> 
+  , <a href="8bitadder.html">8bitadder</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b><a href="mods.html">Divisibility checkers:</a></b></td>
+    <td width="82%"><b> <a
+ href="mod5.html">4mod5</a> , <a href="5mod5.html">5mod5</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b><a href="cycles.html">Cycle functions:</a></b></td>
+    <td width="82%"><b> <a
+ href="cycle10_2.html">cycle10_2</a> , <a href="cycle17_3.html">cycle17_3</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b><a href="gfp^mmults.html">Galois field multipliers:</a></b></td>
+    <td width="82%"><b><a href="gf2^4mult.html">gf2^3mult</a> ,
+    <a href="gf2^4mult.html">gf2^4mult</a> , <a href="gf2^5mult.html">gf2^5mult</a> 
+    , <a href="gf2^6mult.html">gf2^6mult</a> , <a href="gf2^7mult.html">
+    gf2^7mult</a> , <a href="gf2^8mult.html">gf2^8mult</a> ,
+    <a href="gf2^9mult.html">gf2^9mult</a> , <a href="gf2^10mult.html">
+    gf2^10mult</a> , <a href="gf2^11mult.html">gf2^11mult</a> ,
+    <a href="gf2^12mult.html">gf2^12mult</a> , <a href="gf2^13mult.html">
+    gf2^13mult</a> , <a href="gf2^14mult.html">gf2^14mult</a> ,
+    <a href="gf2^15mult.html">gf2^15mult</a> , <a href="gf2^16mult.html">
+    gf2^16mult</a> , <a href="gf2^17mult.html">gf2^17mult</a> ,
+    <a href="gf2^18mult.html">gf2^18mult</a> , <a href="gf2^19mult.html">
+    gf2^19mult</a> , <a href="gf2^20mult.html">gf2^20mult</a> ,
+    <a href="gf2^32mult.html">gf2^32mult</a> , <a href="gf2^50mult.html">
+    gf2^50mult</a> , <a href="gf2^64mult.html">gf2^64mult</a> ,
+    <a href="gf2^100mult.html">gf2^100mult</a> , <a href="gf2^127mult.html">
+    gf2^127mult</a> , <a href="gf2^128mult.html">gf2^128mult</a> ,
+    <a href="gf2^256mult.html">gf2^256mult</a> , <a href="gf2^512mult.html">gf2^512mult</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b><a href="graycodes.html">Gray code functions</a></b></td>
+    <td width="82%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="18%"><b><a href="hams.html">Hamming coding functions:</a></b></td>
+    <td width="82%"><b> <a
+ href="ham3.html">ham3</a>
+, <a href="ham7.html">ham7</a>
+, <a href="ham15.html">ham15</a> </b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b><a href="hwbs.html">Hidden weighted bit functions:</a></b></td>
+    <td width="82%"><b> <a
+ href="hwb4.html">hwb4</a>
+, <a href="hwb5.html">hwb5</a>
+, <a href="hwb6.html">hwb6</a>
+, <a href="hwb7.html">hwb7</a> , <a href="hwb8.html">hwb8</a> , <a
+ href="hwb9.html">hwb9</a> , <a href="hwb10.html">hwb10</a> , <a
+ href="hwb11.html">hwb11</a> , <a href="hwb12.html">hwb12</a> ,
+  <a href="hwb13.html">hwb13</a> , <a href="hwb14.html">hwb14</a> ,
+  <a href="hwb15.html">hwb15</a> , <a href="hwb16.html">hwb16</a> ,
+  <a href="hwb20.html">hwb20</a> , <a href="hwb50.html">hwb50</a> ,
+  <a href="hwb100.html">hwb100</a> , <a href="hwb200.html">hwb200</a> ,
+  <a href="hwb500.html">hwb500</a> , <a href="hwb1000.html">hwb1000</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b>MMD worst case:</b></td>
+    <td width="82%"><b><a href="3_17.html">3_17</a> , <a href="4_49.html">4_49</a> </b>
+    </td>
+  </tr>
+  <tr>
+    <td width="18%"><a href="modadders.html"><b>Modula adders:</b></a></td>
+    <td width="82%"><a
+ href="mod5adder.html"><b>mod5adder</b></a> <span
+ style="font-weight: bold;">,</span> <a href="mod1024adder.html"><span
+ style="font-weight: bold;">mod1024adder</span></a><b>
+, <a href="mod1048576adder.html">mod1048576adder</a></b><a
+ href="mod1024adder.html"><b> </b></a> </td>
+  </tr>
+  <tr>
+    <td width="18%"><b><a href="nthprime.html">N-th prime:</a></b></td>
+    <td width="82%"><b> <a href="nth_prime3_inc.html">
+  nth_prime3_inc</a> , <a href="nth_prime4_inc.html">nth_prime4_inc</a> , 
+  <a href="nth_prime5_inc.html">nth_prime5_inc</a> , 
+  <a href="nth_prime6_inc.html">nth_prime6_inc</a> , 
+  <a href="nth_prime7_inc.html">nth_prime7_inc</a> , 
+  <a href="nth_prime8_inc.html">nth_prime8_inc</a> , 
+  <a href="nth_prime9_inc.html">nth_prime9_inc</a> , 
+  <a href="nth_prime10_inc.html">nth_prime10_inc</a> , 
+  <a href="nth_prime11_inc.html">nth_prime11_inc</a> , 
+  <a href="nth_prime12_inc.html">nth_prime12_inc</a> , 
+  <a href="nth_prime13_inc.html">nth_prime13_inc</a> , 
+  <a href="nth_prime14_inc.html">nth_prime14_inc</a> , 
+  <a href="nth_prime15_inc.html">nth_prime15_inc</a> , 
+  <a href="nth_prime16_inc.html">nth_prime16_inc</a> ,
+  <a href="nth_prime17_inc.html">nth_prime17_inc</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b><a href="permanent.html">Permanent:</a></b></td>
+    <td width="82%"><b> <a href="permanent1x1.html">
+  permanent1x1</a> , <a href="permanent2x2.html">permanent 2x2</a> ,
+  <a href="permanent3x3.html">permanent3x3</a> , <a href="permanent4x4.html">
+  permanent 4x4</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"> <b><a href="rds.html">RD - input weight functions:</a></b></td>
+    <td width="82%"> <b> <a
+ href="rd53.html">rd53</a> , <a href="rd73.html">rd73</a>
+, <a href="rd84.html">rd84</a> </b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b>Symmetric functions:</b></td>
+    <td width="82%"> <b><a href="6sym.html">6sym</a> , <a href="9sym.html">9sym</a></b></td>
+  </tr>
+  <tr>
+    <td width="18%"><b>Other:</b></td>
+    <td width="82%"><a href="2-4dec.html"><span style="font-weight: bold;">2-4dec</span></a><b> 
+    , <a href="2of5.html">2of5</a> , <a href="xor5.html">xor5</a>&nbsp; </b>
+    </td>
+  </tr>
+</table>
+&nbsp;<center>
+<hr width="100%"> <b><font size="+2" color="#990000">RCViewer+: Improved 
+Reversible Circuit Viewer/Analyzer Software:
+<a href="http://ceit.aut.ac.ir/QDA/RCV.htm">description and executable</a>&nbsp;</font></b><p> <b><font size="+2" color="#990000">
+RCViewer: Reversible Circuit Viewer/Analyzer Software: <a href="program/RCViewer.zip"> .zip</a>, <a
+ href="program/RCViewer.exe">.exe</a><font color="#990000">;</font> <a
+ href="readme.html">description</a></font></b></p>
+<hr width="100%">
+<p><b><font size="5">Other reversible circuits sources</font></b></p>
+</center>
+<ul>
+  <li>
+  <p align="left">
+  <a href="http://aqua.sfc.wide.ad.jp/research/arithmetic/arithmetic.html">Rod Van Meter's Reversible/Quantum Arithmetic page</a></li>
+</ul>
+<div align="right">
+<hr width="100%">
+<div style="text-align: center;"><b><font size="4">Content of this web page has 
+  been copied in year 2009. <a href="copy.html">Read more...</a></font></b></div>
+<hr width="100%">
+<p><font size="-1">Developed and maintained by</font> <br>
+<font size="-1"><a href="mailto:dmitri.maslov@gmail.com">Dmitri Maslov</a><br>
+<span style="font-family: times new roman;">Last updated: September 2, 2011</span></font></div>
+</body>
+</html>

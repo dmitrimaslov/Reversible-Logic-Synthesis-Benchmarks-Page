@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Dmitri Maslov">
+  <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+  <meta name="KeyWords"
+ content="reversible logic, benchmarks, synthesis">
+  <title>Reversible Benchmarks</title>
+</head>
+<body background="Plata svetlozelenaja1.jpe">
+<center>
+<h1> <b><font color="#000066">Reversible Logic Synthesis Benchmarks
+Page</font></b></h1>
+</center>
+<hr width="100%">
+<div style="text-align: center;"><font size="+1"
+ style="color: rgb(204, 0, 0);"><span style="font-weight: bold;">Latest
+news/updates:<br>
+</span></font>October 3, 2007: <a href="news.html">more circuits
+added.</a><br>
+</div>
+<hr width="100%">
+<p>The <a href="authors.html">authors</a>
+of this project consider it to be a complementary tool for publishing
+the results of reversible logic (<a href="definitions.html">definitions</a>)
+synthesis. In the very limited space of any standard publication,
+only the cost calculation is usually shown when the actual designs
+would be of more interest. Some authors use their own gates, others
+have their own metric of what the final cost of their implementation
+really is, which also makes it hard to decide on which designs are
+better than others. Here, an approach for a unified comparison of the
+results is suggested, where any author <a href="submit.html"> can
+publish</a> his/her design and/or compare it with already posted ones.
+In order to unify the different models and cost metrics the following
+restrictions apply. First, the synthesis is done with common (in this
+area) restrictions: no
+fan-outs and no feedbacks. Second, the synthesis is preferred to be
+done
+in one of the following models: </p>
+<ul>
+  <li> <b><font color="#003300"><font size="+1">Model NCT:</font></font>
+NOT, CNOT, Toffoli. </b>This gate library was introduced by Toffoli in
+his 1980 paper. This library is the smallest complete set of gates.
+However,
+an additional garbage bit (not every reversible specification can be
+realized
+with zero garbage) may be required by this model.</li>
+  <li> <b><font color="#003300"><font size="+1">Model NCTSF:</font></font>
+NOT, CNOT, Toffoli, SWAP, Fredkin. </b>This library adds SWAP and
+original Fredkin gate to the previous library. Fredkin gates are of
+interest as in some technologies they have a small cost. Inclusions:
+NCTSF&gt;NCT.</li>
+  <li> <b><font color="#003300"><font size="+1">Model GT:</font></font>
+generalized (<i>n</i>-bit) Toffoli. </b>This gate library is complete
+and does not require additional garbage for any reversible
+specification.
+However, some of the gates of this library are expected to have a high
+technological cost. Inclusions: GT&gt;NCT.</li>
+  <li> <b><font color="#003300"><font size="+1">Model GT&amp;GF:</font></font>
+generalized Toffoli and generalized (<i>n</i>-bit) Fredkin. </b>The
+largest gate library. Inclusions: GT&amp;GF&gt;GT, GT&amp;GF&gt;NCTSF,
+GT&amp;GF&gt;NCT.</li>
+</ul>
+Input constants are preset to either 0 or 1 by the designer. Finally,
+the resulting cost is measured with three numbers: garbage, number of
+gates and <a href="definitions.html">quantum cost</a> . All results
+are published in two formats: <a href="mach-read.html">machine-readable
+format</a> and a picture with optional author comments. Everyone is
+welcome to <a href="submit.html"> submit</a> their results in the
+machine-readable format for the immediate publication on this website
+as long as no better design is already published.
+<p>&nbsp;&nbsp;&nbsp; We now have designs for the following benchmark
+functions: </p>
+<ul>
+  <li><a href="2-4dec.html"><span style="font-weight: bold;">2-4dec</span></a><br>
+  </li>
+  <li><b><a href="2of5.html">2of5</a> </b></li>
+  <li> <b><a href="rd32.html">full adder (rd32)</a> </b></li>
+  <li><b><a href="3_17.html">3_17</a> , <a href="4_49.html">4_49</a> </b><br>
+  </li>
+  <li> <b><a href="6sym.html">6sym</a> , <a href="9sym.html">9sym</a>
+    </b></li>
+  <li><b><a href="mods.html">Divisibility checkers:</a>&nbsp; <a
+ href="mod5.html">4mod5</a> , <a href="5mod5.html">5mod5</a></b></li>
+  <li><b><a href="cycles.html">Cycle functions:</a>&nbsp; <a
+ href="cycle10_2.html">cycle10_2</a> , <a href="cycle17_3.html">cycle17_3</a></b></li>
+  <li><b><a href="graycodes.html">Gray code functions</a></b></li>
+  <li><b><a href="hams.html">Hamming coding functions:</a>&nbsp; <a
+ href="ham3.html">ham3</a>
+, <a href="ham7.html">ham7</a>
+, <a href="ham15.html">ham15</a> </b></li>
+  <li><b><a href="hwbs.html">Hidden weight bit functions:</a>&nbsp; <a
+ href="hwb4.html">hwb4</a>
+, <a href="hwb5.html">hwb5</a>
+, <a href="hwb6.html">hwb6</a>
+, <a href="hwb7.html">hwb7</a> , <a href="hwb8.html">hwb8</a> , <a
+ href="hwb9.html">hwb9</a> , <a href="hwb10.html">hwb10</a> , <a
+ href="hwb11.html">hwb11</a> </b><br>
+  </li>
+  <li><a href="modadders.html"><b>Modula adders:</b></a><b>&nbsp; </b><a
+ href="mod5adder.html"><b>mod5adder</b></a> <span
+ style="font-weight: bold;">,</span> <a href="mod1024adder.html"><span
+ style="font-weight: bold;">mod1024adder</span></a><b>
+, <a href="mod1048576adder.html">mod1048576adder</a></b><a
+ href="mod1024adder.html"><b> </b></a> </li>
+  <li> <b><a href="rds.html">RD - input weight functions:</a>&nbsp; <a
+ href="rd53.html">rd53</a> , <a href="rd73.html">rd73</a>
+, <a href="rd84.html">rd84</a> </b></li>
+  <li> <b><a href="xor5.html">xor5</a> </b></li>
+</ul>
+<center>
+<hr width="100%"> <b><font size="+2" color="#990000">Reversible Circuit 
+Viewer/Analyzer (<a href="program/RCViewer.zip"> .zip</a> , <a
+ href="program/RCViewer.exe">.exe</a> ) Software Available (<a
+ href="readme.html">description</a> )</font></b><hr width="100%">
+<p><b><font size="5">Other reversible circuits sources</font></b></p>
+</center>
+<ul>
+  <li>
+  <p align="left">
+  <a href="http://www.tera.ics.keio.ac.jp/person/rdv/quantum/arithmetic.html">
+  Rod Van Meter's Reversible/Quantum Arithmetic page</a></li>
+</ul>
+<div align="right">
+<hr width="100%"><font size="-1">Maintained by</font> <br>
+<font size="-1"><a href="mailto:dmitri.maslov@gmail.com">Dmitri Maslov</a><br>
+<span style="font-family: times new roman;">Last updated: October 3, 2007</span></font></div>
+</body>
+</html>
